@@ -1,0 +1,41 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+**Title: No. of steps taken daily**   
+##Author: "Akshay Kuma Vats"##    
+###date: "17/7/2020"###  
+###Output: "PDF"###  
+
+#Read data  
+```{r}
+#Numeric  
+Steps =c(1100, 4400, 5500, 5400, 6000, 6600, 5700)  
+```
+```{r}
+#"Character"
+days=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday", "Sunday")
+```
+```{r, Echo=TRUE}
+#creating a data frame for number of steps taken daily
+```
+```{r,histogram}
+#histogram=(data, "No. of days", Breaks= "7", col("Red"),xlab="Number of Steps", Main="Histogram representing the number of steps taken daily")  
+```
+#plot("histogram")
+```{r}
+"hist(step(steps = 1100, 4400, 5500, 5400, 6000, 6600, 5700),No.of days(days=Monday,Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday),scale.default(center=TRUE, scale = TRUE))"
+```
+```{r}
+#hist(Steps, days, xlab = "No.of days", breaks = 7, col = "Green",freq = TRUE, dist(1), main = "Histogram representing number of steps taken daily",If includes(in_header = "No. of steps taken daily", before_body = NULL, after_body = NULL))
+```
+```{r}
+#hist.default(Steps)
+frequency(Steps,1000:7000)
+```
+```{r}
+ hist(Steps,breaks = "sturges",freq =NULL,probability = !frequency(Steps,1000:7000), include.lowest = TRUE, density = 2, angle = 45, col = "Green", border = "Red", main = "Histogram representing no. of steps daily", ylab = "days",axes = TRUE,plot = TRUE, labels = TRUE)
+```
+
+
